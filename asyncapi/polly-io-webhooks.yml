@@ -1,0 +1,53 @@
+generated: '2026-10-15'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.polly.io/docs/webhook-overview.md
+sources:
+- https://docs.polly.io/docs/webhook-overview.md
+- https://docs.polly.io/docs/webhook-notification-payload.md
+- https://docs.polly.io/docs/webhook-retries.md
+- https://docs.polly.io/docs/configuring-webhook-security.md
+description: Polly webhook events are delivered as CloudEvents 1.0 payloads. The event type field distinguishes the event.
+events:
+- event: batch.batchCompleted
+  description: This notification is retrieve the output .csv files of pricing scenarios run using our batch processing API. This is not needed
+    for pricing scenario, lock management or loan management integrations.
+- event: changeset.newVersionPublishedAutomatically
+  description: A new changeset (pricing version) has been published automatically. This includes daily ratesheet updates.
+- event: changeset.newVersionPublishedManually
+  description: A new changeset (pricing version) has been published manually. This includes changes/updates to ratesheets, policies, products,
+    rules (fees, margins, adjustments, etc.) and custom parameters.
+- event: customParameter.addedCustomParameter
+  description: Provides notice when a new custom parameter is added to a changeset. Utilizing this will allow subscribers to be kept up to date
+    on configuration changes around custom parameters.
+- event: customParameter.deletedCustomParameter
+  description: Provides notice when a custom parameter has been deleted and is no longer valid.
+- event: customParameter.updatedCustomParameter
+  description: Provides notice when an existing custom parameter has been updated. Utilizing this will allow subscribers to be kept up to date
+    on configuration changes around custom parameters.
+- event: float.floatRequestSubmitted
+  description: Float request submitted. Since float requests do not require a review, there are no approval or denial notifications.
+- event: loan.actionRequired
+  description: Polly Loan Service Only - real time required actions Auto Reprice Triggered - Pricing Affected.
+- event: loan.committedCoIssuer
+  description: Loan was committed on the Polly Loan Exchange.
+- event: lock.autoRepriceLockAutoCancelled
+  description: This notification fires when a pending lock request is present and the loan is auto repriced through Pipeline Monitoring. It will
+    also trigger on Polly Loan Service accounts which have the real-time actions functionality enabled.
+- event: lock.autoRepriceNoPricingChangeNoActionRequired
+  description: Polly Loan Service Only - real time required actions Auto Reprice Triggered - Pricing Unchanged.
+- event: lock.autoRepricePricingChangedNoActionRequired
+  description: Polly Loan Service Only - real time required actions Auto Reprice Triggered - Pricing Affected Auto-Approved.
+- event: lock.confirmationDocumentGenerated
+  description: This notification follows a lock mgmt request (initial lock, reprice, auto-reprice, etc.) approval notification. Integrations can
+    download the base64 pdf payload with GET /lock-confirmation-documents API. Do not use the approval notifications to poll for the confirmation
+    document.
+- event: lock.initialLockRequestApproved
+  description: Initial lock submitted via UI (incl. iFrame) or API has been approved. This can either be manually approved in the lock desk or
+    auto-approved, depending on the initial lock policy.
+delivery:
+  signature: x-polly-signature
+  content_type: Base64-encoded HMAC digest (HMAC‑SHA256 or HMAC‑SHA512) over the raw UTF‑8 request body
+note: 'If OAuth security is configured, webhooks include an `Authorization: Bearer {access_token}` header instead of or in addition to the HMAC
+  signature header. Both mechanisms can be enabled together per API user + organization.'
+docs: https://docs.polly.io/docs/webhook-overview.md

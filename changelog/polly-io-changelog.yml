@@ -1,0 +1,32 @@
+generated: '2026-10-15'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.polly.io/changelog/release-1320-upcoming-changes.md
+sources:
+- https://docs.polly.io/changelog/release-1320-upcoming-changes.md
+entries:
+- breaking: false
+  highlights:
+  - MI Quote Responses Now Include Premium Tax Lines
+  - '`GET /api/v2/mi-quotes/{miRequestId}/` and `GET /api/v2/mi-quotes/{miRequestId}/selection/` now return a `premiumTaxes` array on each quote.'
+  - A quote returns either itemized lines or a single `AllTaxes` line, never both, so the `taxAmount` values can be summed for the total tax.
+  - '`premiumTaxes` is included on every quote. It''s empty when the property is outside Kentucky and West Virginia, or when the provider''s tax
+    lines aren''t available through Polly yet.'
+  date: '2026-10-15'
+- breaking: false
+  highlights:
+  - Lock Requests With a Pricing Request That Has No Loan Now Return 422 Instead of 500
+  - '`POST /api/v2/pe/rate-lock/`, `POST /api/v2/pe/loans/{loanId}/reprice/`, and `POST /api/v2/pe/loans/{loanId}/float/` now return a `422` with
+    the detail `Incorrect parameter: peRequestId {peRequestId} has no loan.`'
+  - These requests previously returned a `500` when the `peRequestId` pointed to a pricing request that had no loan.
+  date: '2026-10-15'
+- breaking: false
+  highlights:
+  - Product Overrides loanType and tltv Now Documented
+  - '`loanType` and `tltv` on `productOverrides` for `POST /api/v2/pe/pricing-scenario/` are now documented in the API reference.'
+  - To price with a total loan to value, send a `loanType` and `tltv` override for each loan type you price; otherwise the total loan to value
+    is recorded as `0`.
+  date: '2026-10-15'
+current_version: '132.0'
+note: Versioning scheme follows a numeric major.minor format (e.g., 132.0).
+docs: https://docs.polly.io/changelog/release-1320-upcoming-changes.md

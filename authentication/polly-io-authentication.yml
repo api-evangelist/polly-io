@@ -1,0 +1,29 @@
+generated: '2026-10-15'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.polly.io/docs/authentication.md
+sources:
+- https://docs.polly.io/docs/authentication.md
+- https://docs.polly.io/reference/securityoauthretrieve.md
+- https://docs.polly.io/reference/securityoauthcreate.md
+- https://docs.polly.io/reference/securityoauthpartialupdate.md
+description: Polly uses an OAuth 2.0‑style Resource Owner Password Credentials (ROPC) flow to issue short‑lived access tokens.
+schemes:
+- type: oauth2
+  name: Polly OAuth2
+  evidence: Polly uses an OAuth 2.0–style Resource Owner Password Credentials (ROPC) flow to issue short-lived access tokens.
+  flows:
+  - password
+  token_url: https://api.prod.polly.io/api/v2/auth/token/
+  scopes:
+  - write
+  - read
+  how_to_obtain: POST https://api.prod.polly.io/api/v2/auth/token/ with form‑encoded body parameters username, password, client_id, client_secret
+    and grant_type=password.
+- type: http-bearer
+  name: Bearer token
+  evidence: 'Include your bearer token in the header of every API request: Authorization: Bearer YOUR_ACCESS_TOKEN'
+  location: header
+  header: Authorization
+  how_to_obtain: Obtain the token via the OAuth2 password flow described above and then send it in the Authorization header as "Bearer <token>".
+docs: https://docs.polly.io/docs/authentication.md

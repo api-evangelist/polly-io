@@ -1,0 +1,9 @@
+generated: '2026-10-15'
+method: derived
+source: docs.polly.io
+deployment:
+  mode: none
+  install: ""
+  package: ""
+  auth: unknown
+  verified: derived

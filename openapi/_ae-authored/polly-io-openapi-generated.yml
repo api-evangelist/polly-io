@@ -1,0 +1,105 @@
+openapi: 3.1.0
+info:
+  title: Polly API
+  version: '2026-10-15'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-15: 5 operation(s) read from 5 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Polly has published no machine-readable contract that the pipeline
+    could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 5
+    pages-with-code: 0
+    pages-read: 5
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-15'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.polly.io/reference/changesetsproductsretrieve.md
+  - https://docs.polly.io/reference/changesetsproductsretrieve2.md
+  - https://docs.polly.io/reference/peportalauthenticationcreate.md
+  - https://docs.polly.io/docs/webhook-overview.md
+  - https://docs.polly.io/docs/webhook-notification-payload.md
+paths:
+  /api/v2/event-types:
+    get:
+      operationId: get_api_v2_event_types
+      tags:
+      - Api
+      summary: High level overview of Polly's webhook APIs, which support all aspects of subscription and security management, as well as listener
+        triage.
+      x-source: https://docs.polly.io/docs/webhook-overview.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/v2/mi-quotes/{mirequestid}/selection:
+    get:
+      operationId: get_api_v2_mi_quotes_mirequestid_selection
+      tags:
+      - Api
+      summary: The selected quote can now be retrieved using the GET /api/v2/mi-quotes/{miRequestId}/selection.
+      x-source: https://docs.polly.io/docs/webhook-notification-payload.md
+      parameters:
+      - name: mirequestid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/v2/webhooks:
+    post:
+      operationId: post_api_v2_webhooks
+      tags:
+      - Api
+      summary: High level overview of Polly's webhook APIs, which support all aspects of subscription and security management, as well as listener
+        triage.
+      x-source: https://docs.polly.io/docs/webhook-overview.md
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /lock-confirmation-documents:
+    get:
+      operationId: get_lock_confirmation_documents
+      tags:
+      - Lock Confirmation Documents
+      summary: Integrations can download the base64 pdf payload with GET /lock-confirmation-documents API.
+      x-source: https://docs.polly.io/docs/webhook-notification-payload.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /mi-quotes:
+    get:
+      operationId: get_mi_quotes
+      tags:
+      - Mi Quotes
+      summary: MI Quotes requested via API can now be retrieved using the GET /mi-quotes endpoint.
+      x-source: https://docs.polly.io/docs/webhook-notification-payload.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+tags:
+- name: Api
+- name: Lock Confirmation Documents
+- name: Mi Quotes
+components:
+  securitySchemes:
+    Bearer_token:
+      type: http
+      scheme: bearer
+      x-source: https://docs.polly.io/docs/authentication.md
+security:
+- Bearer_token: []

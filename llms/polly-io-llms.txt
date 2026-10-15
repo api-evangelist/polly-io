@@ -1,0 +1,206 @@
+# Polly Developer Hub Documentation
+
+> Polly's developer portal shares information to effortlessly integrate with our APIs, and keep yourselves informed about key features and updates
+
+## Guides: Getting Started with Polly
+- [Getting Started](https://docs.polly.io/docs/getting-started.md): Welcome to the Polly Developer Hub, your gateway to integrating with Polly's powerful **Product and Pricing Engine (PPE) APIs**. This documentation provides everything you need to get started with…
+- [Authentication](https://docs.polly.io/docs/authentication.md): This guide will help you connect securely to the Polly API using OAuth 2.0–style Bearer tokens.
+- [Understanding Polly's APIs](https://docs.polly.io/docs/understanding-pollys-apis.md): A high level overview of what can be done via Polly's API suite.
+  - [Concepts and Considerations](https://docs.polly.io/docs/concepts-and-considerations.md): Before building your integration, it's important to understand a few concepts that may influence your early solution design and effort estimates.  This information will also help with early…
+- [Setting Up Postman](https://docs.polly.io/docs/setting-up-postman.md): Step-by-step guide to creating and configuring a Postman collection from Polly's OpenAPI specification with optimal settings for authentication and environment setup.
+
+## Guides: Use Case Library
+- [LOS Integration](https://docs.polly.io/docs/los-integration.md): Outlines a standard integration approach, including scope, required components, and key design considerations.
+  - [Scenario-specific Workflows](https://docs.polly.io/docs/scenario-specific-workflows.md)
+  - [Loan-specific Workflows](https://docs.polly.io/docs/loan-specific-workflows.md)
+
+## Guides: iFraming our UI
+- [iFraming Polly Pricer UI](https://docs.polly.io/docs/iframing-polly-pricer-ui.md): Polly offers the ability to launch the **Polly Pricer UI** into an application, website, or loan origination system, allowing a simplified integration with your system of choice.
+- [Generate Pricing Quotes](https://docs.polly.io/docs/generate-quotes.md): The Generate Quotes feature enables seamless integration between Polly PPE and your Platform. When the Polly Pricer UI is in Scenario Mode, users can explore loan pricing scenarios, generate quotes,…
+
+## Guides: Lock Management APIs
+- [Price Exception Workflow](https://docs.polly.io/docs/price-exception-workflow.md): Understand the price exception process, including high-level concepts, organization configurations, and a step-by-step workflow with detailed API endpoints.
+  - [Price Exception (legacy guide)](https://docs.polly.io/docs/price-exception.md): In the mortgage industry, everyone needs to make a profit or get paid in the case of the loan officer. With the passing of the Dodd-Frank Act (CFTC) loan officers became more limited on helping their…
+- [Product Change Workflow](https://docs.polly.io/docs/product-change-workflow.md): A product change enables a locked product to be replaced with another eligible product while maintaining consistent lock policies and approval workflows.
+  - [Product Change Workflow (legacy guide)](https://docs.polly.io/docs/previous-product-change-workflow.md): Previous documentation for product change, left on the site for comparison purposes.
+- [Reprice Pricing Workflow](https://docs.polly.io/docs/reprice-pricing-workflow.md): Repricing is used when loan data changes after a rate is locked (e.g., new FICO, value, or loan amount). In this workflow, you call the reprice-pricing endpoint to evaluate the impact of those…
+- [Relock Workflow](https://docs.polly.io/docs/relock.md): Understand the relock process, including high-level concepts, organization configurations, and a step-by-step workflow with detailed API endpoints.
+  - [Relock Workflow (legacy guide)](https://docs.polly.io/docs/relock-workflow-legacy-guide.md): Understand the relock process, including high-level concepts, organization configurations, and a step-by-step workflow with detailed API endpoints.
+- [Lock Validation Workflow](https://docs.polly.io/docs/lock-validation-workflow.md): The Lock Validation Workflow allows third-party systems to validate lock requests before they proceed. This workflow integrates via API and webhook events to pause lock processing until a preapproval…
+- [Lock Management Verification](https://docs.polly.io/docs/lock-management-verification.md)
+
+## Guides: Polly Loan Service - Loan and Lock Management
+- [Polly Loan Service Overview](https://docs.polly.io/docs/polly-loan-service-overview.md): Guide dedicated to explaining the Polly Loan Service for integration partners requiring it in their e2e integration (typically, LOS providers that Polly does not have a direct/native integration…
+- [Lock Management - Hybrid Approach](https://docs.polly.io/docs/lock-management-hybrid-approach.md): Adopt a hybrid API approach (using iFrame for pricing and locking), to reduce integration complexity and time-to-market, while benefitting from a combination of comprehensive UI capabilities and…
+- [Lock Management - APIs Only Approach](https://docs.polly.io/docs/lock-management-apis-only-approach.md): Adopt a API-only approach (without using iFrame) to for Loan Officers and Lock Desk to have a unified user experience within the integration's UI ecosystem
+
+## Guides: Pricing
+- [Pricing using our Batch APIs](https://docs.polly.io/docs/pricing-using-our-batch-apis.md): Document Revision 8  The batch processing API provides customers the ability to request a collection of pricing scenario requests at a time, instead of making individual API calls. The request and…
+- [Sample Payload - Pricing Scenario](https://docs.polly.io/docs/post-pricing-scenario-sample-request.md): This page provides an example request payload for the POST /api/v2/pricing-scenario endpoint, organized by logical sections for better readability.
+- [Determining Eligibility Failures From a Pricing Response](https://docs.polly.io/docs/determining-eligibility-failures-from-a-pricing-response.md)
+- [Parsing the Pricing Scenario Response](https://docs.polly.io/docs/parsing-the-pricing-scenario-response.md): This developer guide provides guidance on parsing Polly's **Pricing Scenario API response**.
+
+## Guides: Webhooks
+- [Webhook Overview](https://docs.polly.io/docs/webhook-overview.md): High level overview of Polly's webhook APIs, which support all aspects of subscription and security management, as well as listener triage.
+- [Events - Real-time Required Actions](https://docs.polly.io/docs/required-actions-aka-realtime-pipeline-monitoring.md): If enabled, real-time required actions aka real-time pipeline monitoring, triggers an eligibility and  pricing check, followed by a reprice (if needed), whenever the Polly Loan snapshot is updated…
+- [Webhook Notifications - CloudEvents 1.0](https://docs.polly.io/docs/webhook-notification-payload.md): Polly webhook notifications conform to the CloudEvents Spec 1.0 to ensure interoperability and standardized event delivery.
+- [Webhook Retries](https://docs.polly.io/docs/webhook-retries.md)
+- [Configuring Webhook Security](https://docs.polly.io/docs/configuring-webhook-security.md): Polly provides a full suite of APIs for managing webhooks, from subscription management to delivery lookups.  **Delivery security** can also be managed via the APIs. This guide focuses specifically…
+
+## Guides: MI Quotes
+- [MI Quotes](https://docs.polly.io/docs/mi-quotes-1.md): Ability for our integration partners and developers who want to leverage our MI Quote process via API calls and webhooks, in addition than through our UI.
+
+## API Reference: Polly API
+- Pricing
+  - [Request product change pricing](https://docs.polly.io/reference/peloansproductchangepricingcreate.md): Receive product eligibility and pricing for a product change scenario request, based on the product change policy (current pricing, historical pricing or worst case pricing) for the requested mapped…
+  - [Create a pricing scenario from a loan](https://docs.polly.io/reference/peloanspricingscenarioscreate.md): Requests pricing based on an existing loan file. Loan parameters can be adjusted to allow for scenarios to be built from a loan record.
+  - [Request pricing](https://docs.polly.io/reference/pepricingscenariocreate.md): Receive product eligibility and pricing for a submitted scenario request.
+  - [Request Reprice Pricing](https://docs.polly.io/reference/peloansrepricepricingcreate.md): Receive Pricing for a loan that has already had a lock and needs to be priced based on existing characteristics.
+  - [Retrieve all pricing](https://docs.polly.io/reference/pepricingscenariosretrieve.md): Retrieve all pricing detail for a scenario run earlier.
+  - [Retrieve pricing for a product](https://docs.polly.io/reference/pepricingscenariosproductsretrieve.md): Retrieve pricing detail for all the rates under a specific product, for a scenario run earlier.
+  - [Retrieve pricing for a rate](https://docs.polly.io/reference/pepricingscenariosproductsratesretrieve.md): Retrieve pricing detail for a specific rate under a specific product for a scenario run earlier.
+  - [Retrieve dynamic pricing detail](https://docs.polly.io/reference/pepricingscenariosproductslockperiodsratesdynamicpricingdetailretrieve.md): Dynamic Price is the best ex of net price. The scenario will be evaluated for eligibility, then the remainder of the investors will be evaluated for the net best ex. This depends on how a product is…
+  - [Retrieve base rates](https://docs.polly.io/reference/peratesretrieve2.md): Retrieve base rates by passing the base rate ID from GET base rate sets.
+  - [Retrieve ineligible product eligibility matrices evaluation](https://docs.polly.io/reference/pepricingscenariosproductsruleanalysisineligiblematricesretrieve.md): Provides detailed evaluation of all eligibility matrices for an ineligible product within a given pricing request.
+  - [Retrieve ineligible product eligibility matrix evaluation](https://docs.polly.io/reference/pepricingscenariosproductsruleanalysisineligiblematricesretrieve2.md): Provides detailed evaluation of a specific eligibility matrix for an ineligible product within a given pricing request.
+- Quote Generation
+  - [Create a scenario](https://docs.polly.io/reference/pequotescenariocreate.md): Create a scenario request that can be later used to generate quotes. The fields and ENUMs are case sensitive.
+  - [Retrieve rate quote](https://docs.polly.io/reference/peratequotesretrieve.md): Retrieve rate quotes generated via Polly UI.
+- MI Quotes
+  - [Submit MI quote request](https://docs.polly.io/reference/miquotescreate.md): Request mortgage insurance quotes from all registered MI providers.
+  - [Retrieve MI quotes](https://docs.polly.io/reference/miquotesretrieve.md): Retrieve MI Quotes from all registered MI providers.
+  - [Retrieve selected MI Quote](https://docs.polly.io/reference/miquotesselectionretrieve.md): Retrieve MI Quote information tied to a loan that was selected via the UI. This includes premium or upfront amount for the selected premium type and MI provider
+- Batch Pricing
+  - [Submit batch pricing request](https://docs.polly.io/reference/pebatchpricingcreate.md): Create and start a batch pricing scenario request.
+  - [Retrieve batch pricing](https://docs.polly.io/reference/pebatchpricingretrieve.md): Retrieve the status of batch being processed, and upon completion, the SFTP link to the output files.
+- Float Management
+  - [Submit float request](https://docs.polly.io/reference/peloansfloatcreate.md): Submit a float request. Please note that this is not a float down request.
+  - [Retrieve float requests](https://docs.polly.io/reference/peloansfloatrequestsretrieve.md): Retrieve a list of float requests for a loan.
+  - [Retrieve float request](https://docs.polly.io/reference/peloansfloatrequestsretrieve2.md): Retrieve a float request for a loan.
+- Lock Management
+  - [Request lock extension](https://docs.polly.io/reference/peloanslockextensioncreate.md): Submit a rate lock extension request.
+  - [Retrieve loan level lock policies.](https://docs.polly.io/reference/peloanslockpoliciesretrieve.md): Receive loan level lock polices that can be used in lock management request submission and reviewal workflows.
+  - [Retrieve lock requests](https://docs.polly.io/reference/peloanslockrequestsretrieve.md): Retrieve the lock requests for a loan including buyside and sellside details.
+  - [Approve lock request](https://docs.polly.io/reference/peloanslockrequestsapprovecreate.md): Approve a pending lock request. This can be initial rate lock, price exception or other post-lock workflow approvals.
+  - [Deny lock request](https://docs.polly.io/reference/peloanslockrequestsdenycreate.md): Deny a pending lock request. This can be initial rate lock, price exception or other post-lock workflow approvals.
+  - [Retrieve a lock request](https://docs.polly.io/reference/peloanslockrequestsretrieve2.md): Retrieve a specific lock request of a loan.
+  - [Retrieve loan level lock policies.](https://docs.polly.io/reference/peloanspoliciesretrieve.md): Receive loan level lock polices that can be used in lock management request submission and reviewal workflows.
+  - [Request price exception](https://docs.polly.io/reference/peloanspriceexceptioncreate.md): Submit a price exception request on a locked loan.
+  - [Request product change](https://docs.polly.io/reference/peloansproductchangecreate.md): Submit a product change request on a locked loan
+  - [Retrieve Product Mapping](https://docs.polly.io/reference/peloansproductchangemappingretrieve.md): Provides a listing of all available product change mappings for the specified loan, based on the currently locked product.
+  - [Request relock](https://docs.polly.io/reference/peloansrelockcreate.md): Submit a relock request on a locked loan
+  - [Request relock pricing](https://docs.polly.io/reference/peloansrelockpricingcreate.md): Receive product eligibility and pricing for a relock scenario pricing request, based on the relock policy.
+  - [Request reprice](https://docs.polly.io/reference/peloansrepricecreate.md): Request a reprice on a locked loan.
+  - [Request lock cancellation](https://docs.polly.io/reference/peloanslockcancellationcreate.md): Request a lock cancellation on a locked loan.
+  - [Request lock reset](https://docs.polly.io/reference/peloanslockresetcreate.md): Request a lock reset on a locked loan.
+  - [Retrieve lock confirmation document](https://docs.polly.io/reference/pelockconfirmationdocumentsretrieve.md): Retrieve the lock confirmation document associated with a specific approved lock request. The lock request ID would be part of the initial submission response or the webhook notification.
+  - [Upload a PE document](https://docs.polly.io/reference/pepriceexceptionattachmentscreate.md): Upload a price exception document attachment, if enforced by the organization's price exception policy.
+  - [Request rate lock](https://docs.polly.io/reference/peratelockcreate.md): Request a lock on an unlocked loan.
+  - [Preapproval Result.](https://docs.polly.io/reference/peloanslockrequestspreapprovalcreate.md): This endpoint is used to post the results of a preapproval workflow request.  The preapproval flow must be enabled on the organization for this endpoint to be functional.
+  - [Retrieves lock request notes.](https://docs.polly.io/reference/pelockrequestsnotesretrieve.md): Retrieves notes associated with the given lock request.
+  - [Creates a note associated with the given lock request.](https://docs.polly.io/reference/pelockrequestsnotescreate.md): Creates a note associated with the given lock request.
+  - [Retrieves a specific lock request note.](https://docs.polly.io/reference/pelockrequestsnotesretrieve2.md): Retrieves a specific note associated with the given lock request.
+  - [Request relock pricing evaluated at each rate](https://docs.polly.io/reference/peloansrelockpricingbyratecreate.md): Receive product eligibility and pricing for a relock scenario, based on the relock policy. When the policy evaluates worse case at each rate, every price row carries its own worse-case designation…
+  - [Request relock pricing with after-WCP adjustments](https://docs.polly.io/reference/peloansrelockafterwcpcreate.md): Reprice a selected relock product and rate with the relock policy's after-WCP adjustments and return the pricing request id to submit the relock against. When the policy has no after-WCP settings,…
+  - [Retrieves loan notes.](https://docs.polly.io/reference/peloansnotesretrieve.md): Retrieves every note on the given loan: notes written outside of any lock request and notes belonging to the loan's lock requests.
+  - [Creates a note on the given loan.](https://docs.polly.io/reference/peloansnotescreate.md): Creates a note on the loan outside of any lock request. Set sendToLockDesk to also raise the note as a task on the lock desk task queue.
+  - [Retrieves a loan note.](https://docs.polly.io/reference/peloansnotesretrieve2.md): Retrieves a specific note on the given loan.
+  - [Edits a loan note.](https://docs.polly.io/reference/peloansnotespartialupdate.md): Replaces the text of a note on the given loan. Notes generated by Polly cannot be edited, and organizations can restrict editing of saved notes.
+  - [Deletes a loan note.](https://docs.polly.io/reference/peloansnotesdestroy.md): Deletes a note on the given loan. Notes generated by Polly cannot be deleted, organizations can restrict deletion of saved notes, and a note sent to the lock desk is kept for its task.
+- Loan Management
+  - [Retrieve all loans](https://docs.polly.io/reference/loansretrieve.md): Retrieve all loans in the organization's pipeline
+  - [Create a loan](https://docs.polly.io/reference/loanscreate.md): Create a new loan. The losLoanId will be used as the unique identifier across internal and external systems. The fields and ENUMs are case sensitive.
+  - [Retrieve loan](https://docs.polly.io/reference/loansretrieve2.md): Retrieve a single loan.
+  - [Update a loan](https://docs.polly.io/reference/loansupdate.md): Update an entire loan.
+  - [Update a loan](https://docs.polly.io/reference/loanspartialupdate.md): Update specific fields of a loan.
+  - [Delete loan](https://docs.polly.io/reference/loansdestroy.md): Delete a single loan.
+- Configuration: Loan Management
+  - [Retrieve list of custom parameters](https://docs.polly.io/reference/customparametersretrieve.md): Get all custom parameters tied to an organization's loan model.
+  - [Create custom parameter](https://docs.polly.io/reference/customparameterscreate.md): Create a custom parameter for the organization's loan model. Not to be confused with the pricing configuration custom parameters.
+  - [Retrieve custom parameter](https://docs.polly.io/reference/customparametersretrieve2.md): Retrieve a custom parameter tied with the organization's loan model using the internal custom parameter ID.
+  - [Update custom parameter](https://docs.polly.io/reference/customparametersupdate.md): Update a custom parameter tied with the organization's loan model using the internal custom parameter ID.
+  - [Remove custom parameter](https://docs.polly.io/reference/customparametersdestroy.md): Remove a custom parameter tied with the organization's loan model using the internal custom parameter ID.
+- Configuration: Lock Management
+  - [Retrieve product policies](https://docs.polly.io/reference/changesetsproductslockpoliciesretrieve.md): Retrieve product policies for a specific product.
+  - [Retrieves lock settings](https://docs.polly.io/reference/configurationslocksettingsretrieve.md): Retrieves Lock Settings for a company.
+  - [Retrieve PE approver groups](https://docs.polly.io/reference/pepriceexceptionapprovergroupsretrieve.md): Retrieve a list of all price exception approver groups, hence all price exception approvers of the organization, to determine the appropriate user to approve or deny a pending price exception…
+  - [Retrieve PE approver group](https://docs.polly.io/reference/pepriceexceptionapprovergroupsretrieve2.md): Retrieve a list of all approvers in price exception approver group (if you know the group ID), to determine the appropriate user to approve or deny a pending price exception request. This is tied to…
+  - [Create a PE approver group](https://docs.polly.io/reference/pepriceexceptionapprovergroupscreate.md): Creates a new approver group. To add or remove users from an approver group, see the Add/Remove User from Approver Group endpoints. New approver groups will be enforced in the next version of pricing…
+  - [Retrieve PE reasons](https://docs.polly.io/reference/pepriceexceptionreasonsretrieve.md): Retrieve the list of available reasons and types that the organization permits to request a price exception.
+  - [Retrieve PE requestor groups](https://docs.polly.io/reference/pepriceexceptionrequestorgroupsretrieve.md): Retrieve a list of all price exception requestor groups, hence all price exception requestors of the organization, to determine the appropriate user to submit a price exception request. This is tied…
+  - [Update a PE approver group](https://docs.polly.io/reference/pepriceexceptionapprovergroupspartialupdate.md): Updates an approver group. To add or remove users from an approver group, see the Add/Remove User from Approver Group endpoints. New approver groups will be enforced in the next version of pricing…
+  - [Retrieve a PE requestor group](https://docs.polly.io/reference/pepriceexceptionrequestorgroupsretrieve2.md): Retrieve a price exception requestor group (if you know the group ID) with its list of requestors, to determine the appropriate user to submit a price exception request. This is tied to the price…
+  - [Create a PE requestor group](https://docs.polly.io/reference/pepriceexceptionrequestorgroupscreate.md): Creates a new requestor group. Requestor groups will be utilized in the next pricing version that is published.  To add loan officers to a requestor group utilize the Assign/Remove requestor group…
+  - [Assign a user to a approver group](https://docs.polly.io/reference/pepriceexceptionapprovergroupsapproverscreate.md): Adds the specified user to the specified approver group. The user must have the role of 'Exception Approver' in order to be added.
+  - [Unassign a user from a approver group](https://docs.polly.io/reference/pepriceexceptionapprovergroupsapproversdestroy.md): Removes the specified user from the specified approver group.
+  - [Update a PE requestor group](https://docs.polly.io/reference/pepriceexceptionrequestorgroupspartialupdate.md): Updates a requestor group's details. To Add/Remove users from a requestor group, see the Add/Remove Users from Requestor Group endpoints. New requestor groups will be enforced in the next version of…
+  - [Assign a user to a requestor group](https://docs.polly.io/reference/pepriceexceptionrequestorgroupsrequestorscreate.md): Adds the specified user to the specified requestor group.  The user must have the role of Loan Officer in order to be added.
+  - [Unassign a user from a requestor group](https://docs.polly.io/reference/pepriceexceptionrequestorgroupsrequestorsdestroy.md): Removes the specified user from the specified requestor group.
+  - [Retrieve policies by channel by product](https://docs.polly.io/reference/changesetschannelsproductslockpoliciesretrieve.md): Get list of policies by channel by product within a changeset.  The changesetId can be obtained from certain webhook notifications or the GET base rate sets API.
+- Configuration: Pricing
+  - [Retrieve changesets](https://docs.polly.io/reference/changesetsretrieve.md): Get list of all changesets (pricing versions).
+  - [Retrieve single changeset details by ID](https://docs.polly.io/reference/changesetsretrieve2.md): Get the details of a specific changeset.
+  - [Retrieve products](https://docs.polly.io/reference/changesetsproductsretrieve.md): Get list of products set up for the organization for the specified changeset (pricing version). The changesetId can be obtained from certain webhook notifications or the GET base rate sets API. The…
+  - [Retrieve a product](https://docs.polly.io/reference/changesetsproductsretrieve2.md): Get information for a specific product by its product ID for the specified changeset (pricing version). The changesetId can be obtained from certain webhook notifications or the GET base rate sets…
+  - [Retrieve channels information for the particular changeset](https://docs.polly.io/reference/pechangesetschannelsretrieve.md): Retrieve channels information for the particular changeset.
+  - [Retrieve list of custom parameters](https://docs.polly.io/reference/pecustomparametersretrieve.md): Retrieve the list of custom parameters configured for the Polly pricing engine. Custom parameters impacting product eligibility and pricing should match the loan model list of custom parameters.
+  - [Retrieve custom parameter](https://docs.polly.io/reference/pecustomparametersretrieve2.md): Get a custom parameter from the pricing engine.
+  - [Retrieve base rates sets](https://docs.polly.io/reference/peratesretrieve.md): Retrieve older pricing versions (changesets) and base rate IDs.
+  - [Retrieve products' info](https://docs.polly.io/reference/productsretrieve.md): Get list of products set up for the organization for the current (active) pricing version.
+  - [Retrieve a product's info](https://docs.polly.io/reference/productsretrieve2.md): Get product information by ID set up for the organization for the current (active) pricing version.
+  - [Retrieve products for a channel](https://docs.polly.io/reference/pechangesetchannelsproductsretrieve.md): Get list of products for a specific channel within a changeset. The changesetId can be obtained from certain webhook notifications or the GET base rate sets API.
+- Configuration: HMAC Security
+  - [Get hmac for organization user](https://docs.polly.io/reference/securityhmacretrieve.md): Get hmac for organization user
+  - [Request hmac for organization user](https://docs.polly.io/reference/securityhmaccreate.md): Request hmac for organization user
+  - [Update hmac for organization user](https://docs.polly.io/reference/securityhmacpartialupdate.md): Update hmac for organization user
+  - [Delete hmac for organization user](https://docs.polly.io/reference/securityhmacdestroy.md): Delete hmac for organization user
+- Configuration: OAUTH Security
+  - [Get OAuth for organization user](https://docs.polly.io/reference/securityoauthretrieve.md): Get OAuth for organization user
+  - [Request OAuth for organization user](https://docs.polly.io/reference/securityoauthcreate.md): Request OAuth for organization user
+  - [Update OAuth for organization user](https://docs.polly.io/reference/securityoauthpartialupdate.md): Update OAuth for organization user
+  - [Delete OAuth for organization user](https://docs.polly.io/reference/securityoauthdestroy.md): Delete OAuth for organization user
+- Configuration: Users
+  - [Retrieve users](https://docs.polly.io/reference/peusersretrieve.md): Retrieve a list of all users of the organization.
+  - [Retrieves channels access for the specified user.](https://docs.polly.io/reference/peuserschannelsretrieve.md): Retrieves channels access for the specified user.
+  - [Retrieve user details](https://docs.polly.io/reference/peusersretrieve2.md): Retrieve user detail for provided userId.
+  - [Create a new user](https://docs.polly.io/reference/peuserscreate.md): Creates a new user record. If no parameter is set to register the user, the user will be set to inactive in the system by default. To have the specified user complete setting up their account, send…
+  - [Retrieves custom parameter access for the specified user.](https://docs.polly.io/reference/peusersparametersretrieve.md): Retrieves custom parameter access for the specified user.
+  - [Updates a user](https://docs.polly.io/reference/peuserspartialupdate.md): Updates the specified user account.
+  - [Send welcome email to user](https://docs.polly.io/reference/peuserswelcomecreate.md): Sends a welcome email to the user with the given user ID.
+  - [Assign custom parameter to a user.](https://docs.polly.io/reference/peusersparameterscreate.md): Assigns a custom parameter to a user. Custom parameters can be retrieved from the [Retrieve list of custom parameters](https://docs.polly.io/reference/pecustomparametersretrieve) endpoint. Any custom…
+  - [Updates the set of allowed values for the user’s custom parameter.](https://docs.polly.io/reference/peusersparametersupdate.md): Updates the allowed values that can be used in the specified parameter by the specified user. The parameter being modified must be of type EnumType. If the provided parameter is not yet assigned to…
+  - [Removes custom parameter from a user.](https://docs.polly.io/reference/peusersparametersdestroy.md): Removes a custom parameter from a user. The parameter must exist in the current changeset. If a custom parameter is removed in a changeset, it will automatically be removed from the user when the…
+  - [Activates a deactivated user](https://docs.polly.io/reference/peusersactivatecreate.md): Activates a deactivated user with the given user ID.
+  - [Deactivates an active user](https://docs.polly.io/reference/peusersdeactivatecreate.md): Deactivates an active user with the given user ID.
+- Configuration: Webhooks
+  - [Retrieve subscribable events](https://docs.polly.io/reference/eventtypesretrieve.md): Get the list of event types supported, to subscribe using webhooks.
+  - [Retrieve subscribed webhooks](https://docs.polly.io/reference/webhooksretrieve.md): Retrieve information about the list of registered (subscribed) webhooks.
+  - [Subscribe to events](https://docs.polly.io/reference/webhookscreate.md): Subscribe to one or more events by registering a URL.
+  - [Retrieve subscribed webhook](https://docs.polly.io/reference/webhooksretrieve2.md): Retrieve information about a specific registered webhook tied to one or more subscribed events.
+  - [Update subscribed webhook](https://docs.polly.io/reference/webhooksupdate.md): Update the subscribed webhook using the internal webhook ID.
+  - [Update subscribed webhook partially](https://docs.polly.io/reference/webhookspartialupdate.md): Update certain fields of the subscribed webhook using the internal webhook ID.
+  - [Unsubscribe webhook](https://docs.polly.io/reference/webhooksdestroy.md): Delete the subscribed webhook using the internal webhook ID.
+- iFrame/Portal
+  - [Authenticate UI user](https://docs.polly.io/reference/peportalauthenticationcreate.md): Retrieve a portal login token for a specific UI user session. The portal login token is single time use only, Start the UI session using the GET /api/v2/pe/get-session endpoint (refer to the iFrame…
+- Webhook Notification
+  - [Retrieve webhook notifications](https://docs.polly.io/reference/webhooknotificationsretrieve.md): Retrieve notifications if the system missed the initial notification (and subsequent retries) to the registered URL - different payload than retrieving a specific notification.
+  - [Retrieve webhook notification](https://docs.polly.io/reference/webhooknotificationsretrieve2.md): Retrieve a specific webhook notifications by webhook notification ID, if the system missed the initial notification (and subsequent retries) to the registered URL. The payload follows cloudEvents…
+- Configuration: Rate Sheets
+  - [Retrieve generated rate sheets templates](https://docs.polly.io/reference/changesetsgeneratedratesheetsretrieve.md): Get list of all generated rate sheets templates.
+  - [Retrieve single generated rate sheet template details by template id](https://docs.polly.io/reference/changesetsgeneratedratesheetsretrieve2.md): Get the details of a specific generated rate sheet template by template id.
+- exchange
+  - [Retrieve co-issuer loan details](https://docs.polly.io/reference/exchangecoissuerloansretrieve.md): Retrieves loan and commitment details for a loan that has been committed to the organization as a servicing co-issuer.
+- Audit: Users
+  - [Retrieve user login audit trail entries](https://docs.polly.io/reference/peauditloginsretrieve.md): Retrieves a list of logins for users.  The  query parameters can be utilized to further refine the search.
+
+## Changelog
+- [Release 132.0 - Upcoming Changes](https://docs.polly.io/changelog/release-1320-upcoming-changes.md)
+- [Release 131.0 - Upcoming Changes](https://docs.polly.io/changelog/release-1310-upcoming-changes.md)
+- [Release 129.3 - Hotfix](https://docs.polly.io/changelog/release-1293-hotfix.md)
+- [Release 130.0 - Upcoming Changes](https://docs.polly.io/changelog/release-1300-upcoming-changes.md)
+- [Release 129.0 - Upcoming Changes](https://docs.polly.io/changelog/release-1290-upcoming-changes.md)
+- [Release 128.0 - Upcoming Changes](https://docs.polly.io/changelog/release-1280-upcoming-changes.md)
+- [Release 127.0 - Upcoming Changes](https://docs.polly.io/changelog/release-1270-upcoming-changes.md)
+- [Release 126.0 - Upcoming Changes](https://docs.polly.io/changelog/release-1260-upcoming-changes.md)
+- [Release 125.0 - Upcoming Changes](https://docs.polly.io/changelog/release-1250-upcoming-changes.md)
+- [Release 124.0 - Upcoming Changes](https://docs.polly.io/changelog/release-1240-upcoming-changes.md)

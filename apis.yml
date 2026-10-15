@@ -1,23 +1,113 @@
 aid: polly-io
+
 name: Polly
-description: 'Polly is a company surfaced via the API Evangelist harvest backlog (source: tag-qc) and
-  added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.prod.website-files.com/6a9ee636a1bfd1c743c3343a/6ac41e92c98a00380dfac59d_polly-share-image.jpg
+
+description: Polly is an AI-native capital markets operating system launched in October 2026. It provides a unified platform for mortgage pricing,
+  risk management, loan-level attribution, and investor discovery. The platform offers transparent pricing, intelligent execution at scale, and
+  an API suite ready for integration, aiming to streamline end‑to‑end capital markets processes for lenders and investors.
+
 url: https://raw.githubusercontent.com/api-evangelist/polly-io/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:tag-qc
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-15 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-14'
+
 modified: '2026-10-14'
+
 tags:
-- Company
-apis: []
+- FinTech
+- CapitalMarkets
+- Mortgage
+- APIPlatform
+- AI
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Spectral
+  url: rules/polly-io-rules.yml
+- type: Webhooks
+  url: asyncapi/polly-io-webhooks.yml
+- type: ChangeLog
+  url: changelog/polly-io-changelog.yml
+- type: Compliance
+  url: https://polly.io/vendor-due-diligence
+- type: Authentication
+  url: authentication/polly-io-authentication.yml
+- type: Conformance
+  url: conformance/polly-io-conformance.yml
+- type: LLMsTxt
+  url: llms/polly-io-llms.txt
+- type: SecurityTxt
+  url: well-known/polly-io-status-security.txt
+- type: WellKnown
+  url: well-known/polly-io-well-known.yml
+- type: Hosts
+  url: hosts/polly-io-hosts.yml
+- type: Vendors
+  url: vendors/polly-io-vendors.yml
+- type: StatusPage
+  url: https://status.polly.io/
+- type: PrivacyPolicy
+  url: https://polly.io/privacy-notice/
+- type: TrustCenter
+  url: security/polly-io-trust-center.yml
+- type: DomainSecurity
+  url: security/polly-io-domain-security.yml
 - type: Website
   url: https://polly.io
+- type: APIReference
+  url: https://polly.io/api-suite
+- type: Documentation
+  url: https://polly.io/pollyos
+- type: Blog
+  url: https://polly.io/headlines
+- type: Support
+  url: https://polly.io/vendor-due-diligence
+- type: GettingStarted
+  url: https://polly.io/product-pricing-eligibility
+
+apis:
+- name: Polly API
+  description: Polly's API suite provides access to product and pricing engine functionality for mortgage and capital markets applications.
+  humanURL: https://docs.polly.io/
+  baseURL: null
+  aid: polly-io:polly-api
+- aid: polly-io:polly-io-api
+  name: Polly API
+  description: 'Polly API as documented publicly: 5 operations. Contract generated from the documentation by API Evangelist (2026-10-15); not
+
+    the provider''s own document.'
+  humanURL: https://docs.polly.io/reference/changesetsproductsretrieve.md
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/polly-io-openapi-generated.yml
+    x-provenance: generated
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Docs are served as JavaScript-rendered pages, preventing machine‑readable spec discovery.
+  evidence:
+  - url: https://docs.polly.io/
+    status: 200
+  checked: '2026-10-15'
+x-enrichment:
+  date: '2026-10-15'
+  status: enriched
+  artifacts_added: 15
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

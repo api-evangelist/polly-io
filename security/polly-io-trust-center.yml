@@ -1,0 +1,14 @@
+generated: '2026-10-14'
+method: searched
+probe: true
+source: https://polly.io/vendor-due-diligence
+url: https://polly.io/vendor-due-diligence
+certifications:
+- SOC 2
+- ISO 27001
+evidence:
+- source: https://polly.io/vendor-due-diligence
+  keywords:
+  - soc 2
+  - iso 27001
+  - iso/iec 27001

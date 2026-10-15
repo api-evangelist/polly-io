@@ -1,0 +1,6 @@
+generated: '2026-10-15'
+method: probed
+generator: harvest-llms.py
+source: https://docs.polly.io/llms.txt
+bytes: 33333
+note: saved verbatim; the provider's own document
