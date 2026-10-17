@@ -82,21 +82,49 @@ common:
 
 apis:
 - name: Polly API
-  description: Polly's API suite provides access to product and pricing engine functionality for mortgage and capital markets applications.
+  description: >-
+    Polly's API suite provides access to product and pricing engine functionality for mortgage and capital
+    markets applications.
   humanURL: https://docs.polly.io/
   baseURL: null
   aid: polly-io:polly-api
-- aid: polly-io:polly-io-api
-  name: Polly API
-  description: 'Polly API as documented publicly: 5 operations. Contract generated from the documentation by API Evangelist (2026-10-15); not
-
-    the provider''s own document.'
-  humanURL: https://docs.polly.io/reference/changesetsproductsretrieve.md
+- aid: polly-io:polly-io-event-types-api
+  name: Polly Event Types API
+  description: The Event Types API from Polly — 1 operation(s) for event types.
+  humanURL: https://docs.polly.io/
+  tags:
+  - Event Types
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/polly-io-openapi-generated.yml
-    x-provenance: generated
-
+    url: openapi/polly-io-event-types-api-openapi.yml
+- aid: polly-io:polly-io-lock-confirmation-documents-api
+  name: Polly Lock Confirmation Documents API
+  description: >-
+    The Lock Confirmation Documents API from Polly — 1 operation(s) for lock confirmation documents.
+  humanURL: https://docs.polly.io/
+  tags:
+  - Lock Confirmation Documents
+  properties:
+  - type: OpenAPI
+    url: openapi/polly-io-lock-confirmation-documents-api-openapi.yml
+- aid: polly-io:polly-io-mi-quotes-api
+  name: Polly Mi Quotes API
+  description: The Mi Quotes API from Polly — 2 operation(s) for mi quotes.
+  humanURL: https://docs.polly.io/
+  tags:
+  - Mi Quotes
+  properties:
+  - type: OpenAPI
+    url: openapi/polly-io-mi-quotes-api-openapi.yml
+- aid: polly-io:polly-io-webhooks-api
+  name: Polly Webhooks API
+  description: The Webhooks API from Polly — 1 operation(s) for webhooks.
+  humanURL: https://docs.polly.io/
+  tags:
+  - Webhooks
+  properties:
+  - type: OpenAPI
+    url: openapi/polly-io-webhooks-api-openapi.yml
 x-coverage:
   state: unreadable
   reason: js-rendered-docs

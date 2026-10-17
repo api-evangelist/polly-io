@@ -1,0 +1,26 @@
+{
+  "provider": "polly-io",
+  "sources": [
+    "_ae-authored/polly-io-openapi-generated.yml"
+  ],
+  "outputs": [
+    "polly-io-event-types-api-openapi.yml",
+    "polly-io-lock-confirmation-documents-api-openapi.yml",
+    "polly-io-mi-quotes-api-openapi.yml",
+    "polly-io-webhooks-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "polly-io-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "polly-io-openapi-generated.yml: tagged paths GET /api/v2/event-types -> Event Types",
+    "polly-io-openapi-generated.yml: tagged paths GET /api/v2/mi-quotes/{mirequestid}/selection -> Mi Quotes",
+    "polly-io-openapi-generated.yml: tagged paths POST /api/v2/webhooks -> Webhooks",
+    "polly-io-openapi-generated.yml: declared missing tag: Event Types",
+    "polly-io-openapi-generated.yml: declared missing tag: Webhooks",
+    "apis.yml register: written (+4 apis, 5 total)"
+  ],
+  "skipped": []
+}
