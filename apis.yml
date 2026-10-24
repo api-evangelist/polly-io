@@ -24,6 +24,12 @@ created: '2026-10-14'
 modified: '2026-10-14'
 
 tags:
+- Fintech
+- Capital Markets
+- Mortgage
+- API Platform
+- Artificial Intelligence
+tags_raw:
 - FinTech
 - CapitalMarkets
 - Mortgage
@@ -121,6 +127,8 @@ apis:
   description: The Webhooks API from Polly — 1 operation(s) for webhooks.
   humanURL: https://docs.polly.io/
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: OpenAPI
